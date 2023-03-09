@@ -2,6 +2,8 @@
 
 console.log("ok");
 
+const allEmoloyees = []
+
 function Employee(EmployeeId, fullName, department, Level, image, salary) {
   this.EmployeeId = EmployeeId;
   this.fullName = fullName;
@@ -9,11 +11,10 @@ function Employee(EmployeeId, fullName, department, Level, image, salary) {
   this.Level = Level;
   this.image = image;
   this.salary = this.salary();
+  allEmoloyees.push(this)
 }
 
-const SalaryCalc = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+
 
 Employee.prototype.salary = function() {
   if (this.Level === "Senior") { return SalaryCalc(1500, 2000) }
@@ -28,44 +29,45 @@ Employee.prototype.netSalary = function() {
 Employee.prototype.render = function() {
   let employeeCard = document.write(`
     <h3>${this.fullName}</h3>
-    <p>Department: ${this.department}</p>
-    <p>Level: ${this.Level}</p>
     <p>Salary: ${this.salary}</p>
   `);
   return employeeCard;
 }
 
+const SalaryCalc = (min, max) => {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 
 const ghaziSamer = new Employee(1000, "Ghazi Samer", "Administration", "Senior");
-ghaziSamer.netSalary();
-ghaziSamer.render();
-
 
 const lanaAli = new Employee(1001, "Lana Ali", "Finance", "Senior");
-lanaAli.netSalary();
-lanaAli.render();
-
 
 const tamaraAyoub = new Employee(1002, "Tamara Ayoub", "Marketing", "Senior");
-tamaraAyoub.netSalary();
-tamaraAyoub.render();
 
 const safiwalid = new Employee(1003, "Safi Walid", "Administration", "Mid-Senior");
-safiwalid.netSalary();
-safiwalid.render();
 
 const omarZaid = new Employee(1004, "Omar Zaid", "Development", "Senior");
-tamaraAyoub.netSalary();
-tamaraAyoub.render();
 
 const ranaSaleh = new Employee(1005, "Rana Saleh", "Development", "Junior");
-tamaraAyoub.netSalary();
-tamaraAyoub.render();
 
 const hadiAhmad = new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior");
-tamaraAyoub.netSalary();
-tamaraAyoub.render();
 
 
+objectMethods(allEmoloyees)
+
+console.log(allEmoloyees);
+
+
+
+
+
+
+function objectMethods (arr) {
+for (let i = 0; i < arr.length; i++) {
+  arr[i].render()
+  arr[i].netSalary()
+  
+}
+}
 
