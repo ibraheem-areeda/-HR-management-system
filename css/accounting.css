@@ -1,0 +1,138 @@
+/* this is the header part  */
+
+
+header {
+    background-color: lavender;
+    padding: 0;
+    height: 67px;
+    box-shadow: 0 0 10px 0;
+
+
+
+
+
+}
+
+
+header section img {
+
+    position: absolute;
+    width: 79px;
+    left: 76px;
+    ;
+}
+
+#heading1 {
+    font-family: sans-serif;
+    position: absolute;
+    top: 34px;
+    left: 182px;
+    font-size: 36px;
+    font-family: 'Dosis', sans-serif;
+}
+
+header nav {
+    position: absolute;
+    top: 37px;
+    left: 609px;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li {
+    margin-right: 62px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-decoration-color: black;
+
+}
+
+
+header hr {
+    position: relative;
+    top: -59px;
+}
+
+/* this is the main part  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is the footer part  */
+
+footer {
+    position: absolute;
+    top: 582px;
+    left: 138px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+#f1 a {
+    text-decoration: none;
+    text-decoration-color: black;
+    margin-right: 30px;
+
+
+}
+
+#f2{
+    margin-right: 30px;
+
+
+}
+
+#f3{
+    margin-left: 30px;
+}
+
+
+
+
+
+.pic {
+margin-right: 20px;
+
+}
+
+
+
+ul li img {
+    width: 24px;
+}
