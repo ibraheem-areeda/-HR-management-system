@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <title>HR system</title>
 </head>
+
 <body>
 
     <header>
-        
+
         <h1 id="heading1">HR management system</h1>
         </section>
         <nav>
@@ -28,6 +33,67 @@
 
     </header>
 
+    <main>
+
+        <form id="form">
+            <label for="full name">Full name</label>
+            <input  id="fullname" type="text" required> <br>
+
+            <label for="Department">Department</label>
+            <select  id="Department" required >
+                <option></option>
+                <option value="Administration">Administration</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Development">Development</option>
+                <option value="Finance">Finance</option>
+            </select> <br>
+
+            <label for="level">level</label>
+            <select name="level" id="level" required >
+                <option></option>
+                <option value="Junior">Junior</option>
+                <option value="Mid-Senior">Mid-Senior</option>
+                <option value="Senior">Senior</option>
+            </select><br>
+
+            <label for="Image url">Image url</label>
+            <input id="Imageurl" type="text" required > <br>
+
+            <input type="submit" value="submit" id="submit">
+            
+        </form><br>
+
+        <div id="employeesIdDev"> 
+            
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
 
 
 
@@ -49,7 +115,8 @@
 
     </footer>
 
-    
+
     <script src="./app.js"></script>
 </body>
+
 </html>
