@@ -118,18 +118,47 @@ let marketingNumberOfEmp =  dataArr.filter(function(arr){
     return arr.department === "Finance"
  })
 
-// console.log(AdministrationNumberOfEmp);
-// console.log(marketingNumberOfEmp);
-// console.log(developmentNumberOfEmp);
-// console.log(financeNumberOfEmp);
 
+let r2 = document.getElementById("2")
+let r3 = document.getElementById("3")
+let r4 = document.getElementById("4")
+let r5 = document.getElementById("5")
+let tfoo = document.getElementById("tfoo")
+let totalArrRe =[]
+let callingArray = [AdministrationNumberOfEmp,marketingNumberOfEmp,developmentNumberOfEmp,financeNumberOfEmp]
+let elemetArray = [r2,r3,r4,r5]
+
+function calling(eleArr,objArr) {
+    for (let i = 0; i < eleArr.length; i++) {
+        numRender(eleArr[i],objArr[i])
+        sumSalaryRender(eleArr[i],objArr[i])
+        avSalaryRender(eleArr[i],objArr[i])
+    }
+    
+}
+
+total(callingArray)
+
+calling(elemetArray,callingArray)
+
+totalRender(totalArrRe)
+
+function sumNum (arr) {
+    let sum = 0;
+    arr.forEach(element => {
+        sum ++ ;
+    });
+    return sum 
+}
 
 function avSalary (arr) {
     let sum = 0;
+    let ca =0
     arr.forEach(element => {
         sum += element.salary;
+        ca ++
     });
-    return sum / arr.length;
+    return sum / ca;
 }
 
 function sumSalary (arr) {
@@ -141,52 +170,53 @@ function sumSalary (arr) {
 }
 
 
+function total (arr) {
 
-let adminAv = avSalary(AdministrationNumberOfEmp)
-let marketingAv = avSalary(marketingNumberOfEmp)
-let developmentAv = avSalary(developmentNumberOfEmp)
-let financeAv = avSalary(financeNumberOfEmp)
+    let sumNumAll = 0
+    let sumSalAll = 0
+    let sumAvALL = 0
 
-
-let adminSum = avSalary(AdministrationNumberOfEmp)
-let marketingSum = avSalary(marketingNumberOfEmp)
-let developmentSum = avSalary(developmentNumberOfEmp)
-let financeSum = avSalary(financeNumberOfEmp)
-
-
-
-
-let numImp = document.getElementById("numImp")
-let numMa = document.getElementById("numMa")
-let numDe = document.getElementById("numDe")
-let numFi = document.getElementById("numFi")
-
-
-
-   let r2 = document.getElementById("2")
-let r3 = document.getElementById("3")
-let r4 = document.getElementById("4")
-
+    for (let i = 0; i < arr.length; i++) {
+        sumNumAll += sumNum (arr[i])
+        sumSalAll +=  sumSalary (arr[i])
+        sumAvALL +=  avSalary (arr[i])
+        
+    }
+    return totalArrRe = [sumNumAll , sumSalAll , sumAvALL]
   
-
- function render () {
-
- 
-
-  
-    numImp.textContent = `${AdministrationNumberOfEmp.length}`
-  numImp.appendChild(r2)
-
-  numMa.textContent = `${marketingNumberOfEmp.length}`
-  numMa.appendChild(r3)
-
-  numImp.textContent = `${AdministrationNumberOfEmp.length}`
-  numImp.appendChild(r2)
-
-  numImp.textContent = `${AdministrationNumberOfEmp.length}`
-  numImp.appendChild(r2)
-
-
 }
 
-render ()
+console.log(totalArrRe);
+
+function numRender (pnt,arr) {
+    let chld = document.createElement('td')
+    chld.textContent = `${sumNum(arr)}`
+    pnt.appendChild(chld)
+    
+}
+
+function sumSalaryRender (pnt,arr) {
+    let chld = document.createElement('td')
+    chld.textContent = `${sumSalary(arr) }`
+    pnt.appendChild(chld)
+}
+     
+function avSalaryRender (pnt,arr) {
+    let chld = document.createElement('td')
+    chld.textContent = `${avSalary(arr).toFixed(1) }`
+    pnt.appendChild(chld)
+}
+     
+function totalRender (arr) {
+    for (let i = 0; i < arr.length-1; i++) {
+
+        let chld = document.createElement('td')
+        chld.textContent = `${arr[i]}`
+        tfoo.appendChild(chld)
+        }
+        let chld = document.createElement('td')
+        chld.textContent = `${arr[2].toFixed(1)}`
+        tfoo.appendChild(chld) 
+}
+
+
