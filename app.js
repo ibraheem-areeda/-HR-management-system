@@ -17,7 +17,7 @@ function Employee(EmployeeId, fullName, department, Level, image, salary) { // t
 
 console.log(allEmoloyees);
 
-function idGenerator() {  // function for genarating a random number of 4 digits 
+function idGenerator() {  // function for genarating a random number 
   let id = Math.floor(1000 + Math.random() * 9000)
   return id
 }
