@@ -10,7 +10,7 @@ this project is the frontend web page using JS dom
 
 ### Usage:
 - add employee 
-- see the calculations for the salaries in the table
+-see the calculations for the salaries in the table in the accounting page
 
 ### deployed version 
-[https://main--wondrous-sundae-17ea9a.netlify.app/](https://main--wondrous-sundae-17ea9a.netlify.app/)
+[https://ibraheem-areeda.github.io/HR-management-system/index.html](https://ibraheem-areeda.github.io/HR-management-system/index.html)
